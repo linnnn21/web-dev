@@ -5,6 +5,8 @@ from .models import Product, Category
 def products_list(request):
     products = Product.objects.all()
     data = []
+
+
     for p in products:
         data.append({
             'id': p.id,
